@@ -8,6 +8,6 @@ MSFT,tool,,,LGPO,https://download.microsoft.com/download/8/5/C/85C25433-A1B0-4FF
 MSFT,tool,,,LAPSx64,https://download.microsoft.com/download/C/7/A/C7AAD914-A8A6-4904-88A1-29E657445D03/LAPS.x64.msi,C:\borgkit\Downloads\MSFT\Tools\LAPS.x64.msi,C:\BorgKit\Tools\LAPS\x64
 MSFT,tool,,,LAPSx86,https://download.microsoft.com/download/C/7/A/C7AAD914-A8A6-4904-88A1-29E657445D03/LAPS.x86.msi,C:\borgkit\Downloads\MSFT\Tools\LAPS.x86.msi,C:\BorgKit\Tools\LAPS\x86
 SwiftOnSecurity,config,,,SysmonXML,https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml,C:\BorgKit\Scripts\sysmonconfig-export.xml,C:\BorgKit\Scripts
-jepayne,script,,,WEFFLES,https://github.com/jepayneMSFT/WEFFLES/archive/master.zip,C:\BorgKit\Downloads\Scripts\WEFFLESmaster.zip,C:\BorgKit\Scripts\WEFFLESmaster
+jepayne,script,,,WEFFLES,https://github.com/jepayneMSFT/WEFFLES/archive/master.zip,C:\BorgKit\Downloads\Scripts\WEFFLESmaster.zip,C:\BorgKit\Scripts
 PAW,script,,,PAWcontent,https://gallery.technet.microsoft.com/Privileged-Access-3d072563/file/188014/1/PAWContent%2002052018%20includes%20updated%20firewall.wfw.zip,C:\BorgKit\Downloads\Scripts\PAWContent 02052018 includes updated firewall.wfw.zip,C:\BorgKit\Scripts\PAW
 alexverboon,script,,,ImportSecBaselinesGPO,https://gist.githubusercontent.com/alexverboon/d744339246dc9d28641ab7acbb70385a/raw/8cf9adf6c5ee6993a0c28d6b52d52a4dd8f9095f/Import-SecurityBaselineGPO.ps1,C:\BorgKit\Scripts\Import-SecurityBaselineGPO.ps1,C:\BorgKit\Scripts
