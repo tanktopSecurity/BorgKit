@@ -19,3 +19,16 @@ Inspired by SwiftOnSecurity's "Org Kit", the BorgKit is a lab creation script to
   - Automatically import and link Group Policy Objects to correct OUs
   - Copy all executables to SYSVOL\software and set scheduled tasks GPOs to install security software (per syspanda)
   - Enable Bitlocker on Computers OU and set Bitlocker Readers group
+
+## Known Issues / Task List
+Upon resume of script after forest/domain install and server reboot, the script asks for the DomainName and DSRM password. You can just press enter or type anything and press enter. It will not be passed into the second part of the script.
+
+The script is hard-coded to run everything for Windows 10/Server 2019 "1909". The code is mostly there to allow the script to use different Windwos/Server releases, but needs a bit of work to fully support this. 
+
+The Set-PAWOUDelegation.ps1 script from the PAWScripts section does not always initialize properly. I attempted to mittigate this by adding a wait timer and a dectction to wait for the forest to be initialized. 
+
+The Set-GPOLinks function is hard-coded to import GPOs with "1909" in the name.
+
+Tested:
+
+Windows Server 2019 - PowerShell 5.1.17763.592
