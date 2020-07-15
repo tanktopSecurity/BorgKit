@@ -29,6 +29,6 @@ The Set-PAWOUDelegation.ps1 script from the PAWScripts section does not always i
 
 The Set-GPOLinks function is hard-coded to import GPOs with "1909" in the name.
 
-Tested:
+Works on:
 
 Windows Server 2019 - PowerShell 5.1.17763.592
