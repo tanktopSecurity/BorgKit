@@ -1,9 +1,9 @@
 # BorgKit
 
 ## What is BorgKit?
-Inspired by SwiftOnSecurity's "Org Kit", the BorgKit is a lab creation script to aid in the creation of a level higher of "secure by default", on-premises Windows domain/forest. The majority of scripts and tools used within are directly from Microsoft and are at the guidance of their respective Microsoft creators. The intention of BorgKit (at least in this iteration of the project) is not to reach DOD or other extremely high levels of security. The two primay goals are:
-  Provide Blue teams with a reference domain/forest
-  Allow Red teams to create a "secure by default" domain in which to practice
+Inspired by SwiftOnSecurity's "Org Kit", the BorgKit is a lab creation script to aid in the creation of a level higher of "secure by default", on-premises Windows domain/forest. The majority of scripts and tools used within are directly from Microsoft and are at the guidance of their respective Microsoft creators. The intention of BorgKit (at least in this iteration of the project) is not to reach extremely high levels of security. The two primay goals are:
+- Provide Blue teams with a reference domain/forest
+- Allow Red teams to create a "secure by default" domain in which to practice
   
 ## The BorgKit script automates the following:
   - Ensure a uniform folder structure for components
@@ -20,15 +20,18 @@ Inspired by SwiftOnSecurity's "Org Kit", the BorgKit is a lab creation script to
   - Copy all executables to SYSVOL\software and set scheduled tasks GPOs to install security software (per syspanda)
   - Enable Bitlocker on Computers OU and set Bitlocker Readers group
 
+## How to Use
+On a **blank** Server 2019 server, clone or download the folder structure and Invoke-BorgKit.ps1 script. Open PowerShell as administrator, and run `Import-Module C:\BorgKit\Scripts\Invoke-Borgkit.ps1`. You'll be asked for the domain name (i.e. domain.local or lab.domain) and the DSRM password. BorgKit will go through each step and prepare the blank server to become a domain controller. 
+
+
 ## Known Issues / Task List
 Upon resume of script after forest/domain install and server reboot, the script asks for the DomainName and DSRM password. You can just press enter or type anything and press enter. It will not be passed into the second part of the script.
 
 The script is hard-coded to run everything for Windows 10/Server 2019 "1909". The code is mostly there to allow the script to use different Windwos/Server releases, but needs a bit of work to fully support this. 
 
-The Set-PAWOUDelegation.ps1 script from the PAWScripts section does not always initialize properly. I attempted to mittigate this by adding a wait timer and a dectction to wait for the forest to be initialized. 
+The Set-PAWOUDelegation.ps1 script from the PAWScripts section does not always initialize properly. I attempted to mittigate this by adding a timer and detector to wait for the forest/DNS to be initialized. 
 
-The Set-GPOLinks function is hard-coded to import GPOs with "1909" in the name.
+The Set-GPOLinks function is hard-coded to import GPOs with "1909" in the nam, will move this to be more modular and allow other Windows versions/builds.
 
-Works on:
-
+## Works on:
 Windows Server 2019 - PowerShell 5.1.17763.592
